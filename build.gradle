@@ -21,10 +21,14 @@ dependencies {
     implementation("jakarta.annotation:jakarta.annotation-api")
     implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
-    runtimeOnly("ch.qos.logback:logback-classic")
+    implementation("redis.clients:jedis:4.2.3")
     implementation("io.micronaut:micronaut-validation")
-
-    runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
+    annotationProcessor("io.micronaut.data:micronaut-data-document-processor")
+    implementation("io.micronaut.data:micronaut-data-mongodb")
+    implementation("io.micronaut.kafka:micronaut-kafka")
+    implementation("io.micronaut.discovery:micronaut-discovery-client")
+    runtimeOnly("org.mongodb:mongodb-driver-sync")
+    runtimeOnly("ch.qos.logback:logback-classic")
 
 }
 

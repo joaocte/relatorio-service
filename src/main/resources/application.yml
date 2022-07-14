@@ -1,7 +1,21 @@
 micronaut:
   application:
     name: relatorioService
+  server:
+    port: -1
 netty:
   default:
     allocator:
       max-order: 3
+mongodb:
+  uri: mongodb://localhost:27017/RelatorioMS
+
+kafka:
+  bootstrap:
+    servers: localhost:29092
+
+consul:
+  client:
+    registration:
+      enabled: true
+    defaultZone: "localhost:8500"
